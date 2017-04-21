@@ -14,7 +14,7 @@ namespace RohitAzureOfflineSyncService.Controllers
         protected override void Initialize(HttpControllerContext controllerContext)
         {
             base.Initialize(controllerContext);
-            RohitAzureOfflineSyncContext context = new RohitAzureOfflineSyncContext();
+            var context = new RohitAzureOfflineSyncContext();
             DomainManager = new EntityDomainManager<TodoItem>(context, Request);
         }
 
